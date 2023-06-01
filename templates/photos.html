@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Photos of School and Children</h1>
+<!-- <h2>Upload new photos</h2>
+<form method="post" action="/upload-photos" enctype="multipart/form-data">
+    <input type="file" name="photos" multiple >
+    <input type="submit">
+</form><br> -->
+{% for url in list_urls %}
+    <img src="{{ url }}" width="auto" height="200" >
+    
+
+{% endfor %}
+<br>
+<h6>Upload new photos</h6>
+<form method="post" action="/upload-photos" enctype="multipart/form-data">
+    <input type="file" name="photos" multiple >
+    <input type="submit">
+</form>
+<!-- {{ img_html }} -->
+
+{% endblock %}
